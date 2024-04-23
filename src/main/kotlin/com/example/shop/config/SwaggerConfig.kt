@@ -1,4 +1,4 @@
-package com.example.shop.utils
+package com.example.shop.config
 
 import io.swagger.v3.oas.models.Components
 import io.swagger.v3.oas.models.OpenAPI
@@ -16,7 +16,8 @@ class SwaggerConfig {
     fun swaggerApi(): OpenAPI = OpenAPI()
         .components(
             Components()
-            .addSecuritySchemes(SECURITY_SCHEME_NAME, SecurityScheme()
+            .addSecuritySchemes(
+                SECURITY_SCHEME_NAME, SecurityScheme()
                 .name(SECURITY_SCHEME_NAME)
                 .type(SecurityScheme.Type.HTTP)
                 .scheme("bearer")
